@@ -18,6 +18,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        // 네이버 map
+        <meta-data
+            android:name="com.naver.maps.map.CLIENT_ID"
+            android:value="gn3ik9c3ko" />
     </application>
 
 </manifest>
