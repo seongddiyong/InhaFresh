@@ -6,20 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <fragment android:layout_width="match_parent"
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/map"
-        android:name="com.naver.maps.map.MapFragment" />
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.naver.maps.map.MapView
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+        <FrameLayout
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-    <com.naver.maps.map.widget.ZoomControlView
-        android:id="@+id/zoom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        android:layout_gravity="end|bottom"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        <com.naver.maps.map.widget.ZoomControlView
+            android:id="@+id/zoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:layout_gravity="end|bottom" />
 
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
