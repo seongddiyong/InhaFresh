@@ -5,16 +5,6 @@ plugins {
     id 'org.jetbrains.kotlin.android' version '1.5.30' apply false
 }
 
-// 네이버 지도
-allprojects {
-    repositories {
-        google()
-        jcenter()
-        maven {
-            url 'https://naver.jfrog.io/artifactory/maven/'
-        }
-    }
-}
 
 task clean(type: Delete) {
     delete rootProject.buildDir
