@@ -10,6 +10,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.example.inhafresh.databinding.ActivityMainBinding
 import com.google.android.gms.location.*
 import com.naver.maps.geometry.LatLng
 import com.naver.maps.map.*
@@ -18,6 +19,7 @@ import com.naver.maps.map.util.FusedLocationSource
 
 class MainActivity : AppCompatActivity(), OnMapReadyCallback {
 
+    lateinit var binding: ActivityMainBinding
     lateinit var mapView: MapView
 
     private lateinit var locationSource: FusedLocationSource
