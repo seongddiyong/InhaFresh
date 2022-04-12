@@ -19,7 +19,7 @@ import com.naver.maps.map.util.FusedLocationSource
 
 class MainActivity : AppCompatActivity(), OnMapReadyCallback {
 
-    lateinit var binding: ActivityMainBinding
+    lateinit var binding: ActivityMapBinding
     lateinit var mapView: MapView
 
     private lateinit var locationSource: FusedLocationSource
