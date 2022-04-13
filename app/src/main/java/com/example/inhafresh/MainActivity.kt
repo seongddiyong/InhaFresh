@@ -19,9 +19,9 @@ import com.naver.maps.map.util.FusedLocationSource
 
 class MainActivity : AppCompatActivity(), OnMapReadyCallback {
 
-    lateinit var binding: ActivityMapBinding
+    lateinit var binding: ActivityMainBinding
     lateinit var mapView: MapView
-
+    private val LOCATION_PERMISSTION_REQUEST_CODE: Int = 1000
     private lateinit var locationSource: FusedLocationSource
     private lateinit var naverMap: NaverMap
 
@@ -104,10 +104,10 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
 
 
         //좌표 변경 시 토스트로 표시
-        naverMap.addOnLocationChangeListener { location ->
+        /*naverMap.addOnLocationChangeListener { location ->
             Toast.makeText(this, "${location.latitude}, ${location.longitude}",
                 Toast.LENGTH_SHORT).show()
-        }
+        }*/
     }
 
     companion object {
